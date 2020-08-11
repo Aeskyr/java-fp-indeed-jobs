@@ -12,6 +12,8 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <bytecodeTargetLevel>
+      <module name="indeed-jobs.main" target="1.8" />
+      <module name="indeed-jobs.test" target="1.8" />
       <module name="indeed-jobs_main" target="1.8" />
       <module name="indeed-jobs_test" target="1.8" />
     </bytecodeTargetLevel>

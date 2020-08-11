@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/indeed-jobs.iml" filepath="$PROJECT_DIR$/.idea/modules/indeed-jobs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/indeed-jobs_main.iml" filepath="$PROJECT_DIR$/.idea/modules/indeed-jobs_main.iml" group="indeed-jobs" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/indeed-jobs_test.iml" filepath="$PROJECT_DIR$/.idea/modules/indeed-jobs_test.iml" group="indeed-jobs" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/indeed-jobs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/indeed-jobs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/indeed-jobs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/indeed-jobs.test.iml" />
     </modules>
   </component>
 </project>
