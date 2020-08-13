@@ -20,6 +20,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.Arrays.asList;
+
 public class App {
 
     public static void main(String[] args) {
@@ -49,16 +51,27 @@ public class App {
         return title.contains("junior") || title.contains("jr");
     }
 
-    private static void explore(List<Job> jobs) {
-        Function<String,String> converter = createDateStringConverter(
-                DateTimeFormatter.RFC_1123_DATE_TIME,
-                DateTimeFormatter.ISO_DATE_TIME
-        );
 
-        jobs.stream()
-                .map(Job::getDateTimeString)
-                .map(converter)
-                .forEach(System.out::println);
+
+    private static void explore(List<Job> jobs) {
+        parenthesesCheker("((1))");
+        parenthesesCheker("1(()())");
+        parenthesesCheker("(2)");
+        parenthesesCheker("3()(4");
+        parenthesesCheker("(3)2)");
+        parenthesesCheker("(");
+        parenthesesCheker(")");
+
+//        Function<String, String> converter = createDateStringConverter(
+//                DateTimeFormatter.RFC_1123_DATE_TIME,
+//                DateTimeFormatter.ISO_DATE_TIME
+//        );
+//
+//        jobs.stream()
+//                .map(Job::getDateTimeString)
+//                .map(converter)
+//                .forEach(System.out::println);
+
     }
 
     public static Function<String, String> createDateStringConverter(
@@ -114,6 +127,31 @@ public class App {
                 ));
     }
 
+    public static boolean isBalanced(String[] strings) {
+        int i =0;
+        for(String string : strings)
+        {
+                if (string.equals("(")){
+                i++;
+            }
+            if (string.equals(")")){
+                i--;
+                if (i < 0){
+                    return false;
+                }
+            }
+        }
+        if (i == 0){
+            return true;
+        }
+        else return false;
+    }
+
+
+    public static boolean parenthesesCheker(String s) {
+        System.out.println(isBalanced(s.split("")));
+        return isBalanced(s.split(""));
+    }
 
     public static Map<String, Long> getSnippetWordCountsImperatively(List<Job> jobs) {
 
